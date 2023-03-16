@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+
+function Counter(props) {
+  console.log('props', props);
+  return <div>
+    <h1>Counter</h1>
+    <button>➕</button> 👉 0
+  </div>
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Counter title="불면증 카운터" initValue="10"></Counter>
+      <Counter title="입작객 카운터" initValue="20"></Counter>
     </div>
   );
 }
